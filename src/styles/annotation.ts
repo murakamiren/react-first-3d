@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
 
 export const annotationStyle = css`
-	transform: translate3d(calc(50% + 40px), 0, 0);
+	width: 260px;
+	transform: translate3d(35%, 0, 0);
 	text-align: left;
 	background: #333;
 	color: white;
@@ -17,5 +18,13 @@ export const annotationStyle = css`
 		height: 1px;
 		width: 40px;
 		background: #333;
+	}
+
+	h1 {
+		margin-bottom: 8px;
+	}
+
+	p {
+		font-size: 14px;
 	}
 `;
