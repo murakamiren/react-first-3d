@@ -11,6 +11,7 @@ const Box: FC<BoxProps> = (props) => {
 	const meshRef = useRef<Mesh>(null!);
 	const [hover, setHover] = useState(false);
 	const [active, setActive] = useState(false);
+
 	// boxの回転
 	useFrame((state, delta) => (meshRef.current.rotation.x += 0.01));
 	useFrame((state, delta) => (meshRef.current.rotation.y += -0.01));
