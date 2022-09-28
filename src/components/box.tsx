@@ -1,3 +1,4 @@
+import { animated } from "@react-spring/three";
 import { ThreeElements, useFrame } from "@react-three/fiber";
 import { FC, useRef, useState } from "react";
 import { Mesh } from "three";
@@ -10,6 +11,7 @@ const Box: FC<BoxProps> = (props) => {
 	const [active, setActive] = useState(false);
 	// boxの回転
 	useFrame((state, delta) => (meshRef.current.rotation.x += 0.01));
+	useFrame((state, delta) => (meshRef.current.rotation.y += -0.01));
 
 	return (
 		<mesh
@@ -20,7 +22,7 @@ const Box: FC<BoxProps> = (props) => {
 			onPointerOver={() => setHover(true)}
 			onPointerOut={() => setHover(false)}
 		>
-			<boxGeometry args={[1, 1, 1]} />
+			<boxGeometry args={[1.5, 1.5, 1.5]} />
 			<meshStandardMaterial color={hover ? "hotpink" : "orange"} />
 		</mesh>
 	);

@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import Box from "./components/box";
+import "./styles.css";
 
 const App = () => {
 	return (
