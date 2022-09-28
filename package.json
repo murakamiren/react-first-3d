@@ -9,6 +9,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@emotion/react": "^11.10.4",
 		"@react-spring/three": "9.4.4",
 		"@react-three/drei": "^9.32.3",
 		"@react-three/fiber": "^8.8.6",

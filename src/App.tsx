@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import Box from "./components/box";
 import Rig from "./components/rig";
-import "./styles.css";
+import "./styles/styles.css";
 
 const App = () => {
 	return (

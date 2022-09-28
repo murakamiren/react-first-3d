@@ -2,6 +2,7 @@ import { animated, useSpring } from "@react-spring/three";
 import { useFrame } from "@react-three/fiber";
 import { FC, useRef, useState } from "react";
 import { Mesh } from "three";
+import Annotation from "./annotation";
 
 type BoxProps = {
 	position: [x: number, y: number, z: number];
@@ -30,6 +31,7 @@ const Box: FC<BoxProps> = (props) => {
 		>
 			<boxGeometry args={[1.5, 1.5, 1.5]} />
 			<meshStandardMaterial color={hover ? "hotpink" : "orange"} />
+			<Annotation />
 		</animated.mesh>
 	);
 };
