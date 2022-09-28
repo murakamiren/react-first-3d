@@ -1,4 +1,4 @@
-import { ThreeElements } from "@react-three/fiber";
+import { ThreeElements, useFrame } from "@react-three/fiber";
 import { FC, useRef, useState } from "react";
 import { Mesh } from "three";
 
@@ -8,6 +8,8 @@ const Box: FC<BoxProps> = (props) => {
 	const meshRef = useRef<Mesh>(null!);
 	const [hover, setHover] = useState(false);
 	const [active, setActive] = useState(false);
+	// boxの回転
+	useFrame((state, delta) => (meshRef.current.rotation.x += 0.01));
 
 	return (
 		<mesh
