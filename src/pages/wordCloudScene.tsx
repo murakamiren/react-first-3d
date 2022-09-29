@@ -8,8 +8,8 @@ const WordCloudScene: FC = () => {
 	return (
 		<SceneWrap>
 			<Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
-				<fog attach="fog" args={["#202025", 0, 80]} />
-				<Cloud count={6} radius={20} />
+				<fog attach="fog" color="#fff" near={0} far={80} />
+				<Cloud count={4} radius={16} />
 				<TrackballControls />
 			</Canvas>
 		</SceneWrap>
