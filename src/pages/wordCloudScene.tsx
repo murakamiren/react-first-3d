@@ -9,7 +9,7 @@ const WordCloudScene: FC = () => {
 		<SceneWrap>
 			<Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
 				<fog attach="fog" color="#fff" near={0} far={80} />
-				<Cloud count={5} radius={16} />
+				<Cloud count={5} radius={14} />
 				<OrbitControls makeDefault autoRotate />
 			</Canvas>
 		</SceneWrap>

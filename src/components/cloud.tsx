@@ -9,7 +9,7 @@ const wordsContent: string[] = [
 	"sass",
 	"css",
 	"html",
-	"javaScript",
+	"javascript",
 	"python",
 	"vue",
 	"tailwindcss",
