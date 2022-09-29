@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from ".";
 import BoxScene from "./pages/boxScene";
 import ModelScene from "./pages/modelScene";
+import TextScene from "./pages/textScene";
+import WordCloudScene from "./pages/wordCloudScene";
 
 const route = createBrowserRouter([
 	{
@@ -15,6 +17,14 @@ const route = createBrowserRouter([
 	{
 		path: "/modelscene",
 		element: <ModelScene />,
+	},
+	{
+		path: "/textscene",
+		element: <TextScene />,
+	},
+	{
+		path: "/wordcloudscene",
+		element: <WordCloudScene />,
 	},
 ]);
 

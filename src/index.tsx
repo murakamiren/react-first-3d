@@ -13,6 +13,12 @@ const Index: FC = () => {
 					<li>
 						<a href="modelscene">model scene</a>
 					</li>
+					<li>
+						<a href="textscene">text scene</a>
+					</li>
+					<li>
+						<a href="wordcloudscene">word-cloud scene</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
