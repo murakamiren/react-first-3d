@@ -1,4 +1,4 @@
-const App = () => {
+const Index = () => {
 	return (
 		<div style={{ width: "100vw", height: "100vh" }}>
 			<p>aaaaaa</p>
@@ -9,4 +9,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default Index;

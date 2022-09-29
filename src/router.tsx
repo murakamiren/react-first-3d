@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
+import Index from ".";
 import BoxScene from "./pages/boxScene";
 
 const route = createBrowserRouter([
 	{
 		path: "/",
-		element: <App />,
+		element: <Index />,
 	},
 	{
 		path: "/boxscene",
