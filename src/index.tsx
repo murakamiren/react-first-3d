@@ -8,7 +8,10 @@ const Index: FC = () => {
 				<h1>react-three-fiber + typescript</h1>
 				<ul>
 					<li>
-						<a href="boxscene">boxscene</a>
+						<a href="boxscene">box scene</a>
+					</li>
+					<li>
+						<a href="modelscene">model scene</a>
 					</li>
 				</ul>
 			</nav>

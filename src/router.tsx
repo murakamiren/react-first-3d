@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from ".";
 import BoxScene from "./pages/boxScene";
+import ModelScene from "./pages/modelScene";
 
 const route = createBrowserRouter([
 	{
@@ -10,6 +11,10 @@ const route = createBrowserRouter([
 	{
 		path: "/boxscene",
 		element: <BoxScene />,
+	},
+	{
+		path: "/modelscene",
+		element: <ModelScene />,
 	},
 ]);
 
