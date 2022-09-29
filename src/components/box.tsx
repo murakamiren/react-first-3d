@@ -6,6 +6,7 @@ import Annotation from "./annotation";
 
 type BoxProps = {
 	position: [x: number, y: number, z: number];
+	castShadow?: boolean;
 };
 
 const Box: FC<BoxProps> = (props) => {
@@ -29,7 +30,7 @@ const Box: FC<BoxProps> = (props) => {
 			onPointerOut={() => setHover(false)}
 		>
 			<boxGeometry args={[1.5, 1.5, 1.5]} />
-			<meshStandardMaterial color={hover ? "hotpink" : "orange"} />
+			<meshStandardMaterial color={hover ? "orange" : "#939393"} />
 			<Annotation />
 		</animated.mesh>
 	);
