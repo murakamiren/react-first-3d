@@ -12,6 +12,7 @@ export const indexStyle = css`
 		list-style: none;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 16px;
 	}
 `;
