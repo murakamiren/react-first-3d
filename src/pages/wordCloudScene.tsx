@@ -1,15 +1,16 @@
-import { Text } from "@react-three/drei";
+import { Text, TrackballControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { FC } from "react";
+import Cloud from "../components/cloud";
 import SceneWrap from "../components/sceneWrap";
 
 const WordCloudScene: FC = () => {
 	return (
 		<SceneWrap>
-			<Canvas>
-				<Text position={[0, 0, 0]} font="/font/Roboto-Bold.ttf" fontSize={1} color="#333">
-					HELLO WORLD
-				</Text>
+			<Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
+				<fog attach="fog" args={["#202025", 0, 80]} />
+				<Cloud count={6} radius={20} />
+				<TrackballControls />
 			</Canvas>
 		</SceneWrap>
 	);
