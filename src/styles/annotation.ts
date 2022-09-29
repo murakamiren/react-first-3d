@@ -6,7 +6,6 @@ export const annotationStyle = css`
 	text-align: left;
 	background: #333;
 	color: white;
-	font-family: sans-serif;
 	padding: 10px 15px;
 	border-radius: 6px;
 
