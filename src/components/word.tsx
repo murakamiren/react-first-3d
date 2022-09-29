@@ -20,7 +20,7 @@ const Word: FC<WordProps> = ({ children, position }) => {
 		<Text
 			ref={textRef}
 			font="/font/Roboto-Bold.ttf"
-			fontSize={2}
+			fontSize={2.2}
 			color="#333"
 			children={children}
 			position={position}

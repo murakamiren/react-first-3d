@@ -1,4 +1,3 @@
-import { useFrame } from "@react-three/fiber";
 import { FC, useMemo, useRef } from "react";
 import { Group, Spherical, Vector3 } from "three";
 import Word from "./word";
@@ -19,7 +18,17 @@ const wordsContent: string[] = [
 	"php",
 	"pug",
 	"svelte",
+	"Node.js",
+	"rest",
+	"gulp",
+	"express.js",
 	"vscode",
+	"figma",
+	"XD",
+	"photoshop",
+	"aftereffect",
+	"Illustrator",
+	"docker",
 ];
 
 type CloudProps = {

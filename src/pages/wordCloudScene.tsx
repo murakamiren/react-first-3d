@@ -1,4 +1,4 @@
-import { Text, TrackballControls } from "@react-three/drei";
+import { OrbitControls, TrackballControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { FC } from "react";
 import Cloud from "../components/cloud";
@@ -9,8 +9,8 @@ const WordCloudScene: FC = () => {
 		<SceneWrap>
 			<Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
 				<fog attach="fog" color="#fff" near={0} far={80} />
-				<Cloud count={4} radius={16} />
-				<TrackballControls />
+				<Cloud count={5} radius={16} />
+				<OrbitControls makeDefault autoRotate />
 			</Canvas>
 		</SceneWrap>
 	);
