@@ -2,11 +2,11 @@ import { css } from "@emotion/react";
 
 export const annotationStyle = css`
 	width: 260px;
-	transform: translate3d(35%, 0, 0);
+	transform: translate3d(25%, -10%, 0);
 	text-align: left;
 	background: #333;
 	color: white;
-	padding: 10px 15px;
+	padding: 12px 16px;
 	border-radius: 6px;
 
 	&::before {
@@ -20,10 +20,11 @@ export const annotationStyle = css`
 	}
 
 	h1 {
+		font-size: 16px;
 		margin-bottom: 8px;
 	}
 
 	p {
-		font-size: 14px;
+		font-size: 12px;
 	}
 `;

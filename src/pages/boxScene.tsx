@@ -1,18 +1,22 @@
+import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 import Box from "../components/box";
 import Rig from "../components/rig";
+import SceneWrap from "../components/sceneWrap";
 import "../styles/styles.css";
 
 const BoxScene = () => {
 	return (
-		<div style={{ width: "100vw", height: "100vh" }}>
-			<Canvas shadows camera={{ position: [0, 1.5, 8], fov: 80 }}>
+		<SceneWrap>
+			<Canvas shadows>
+				<PerspectiveCamera makeDefault />
 				<ambientLight intensity={0.2} />
 				<Rig />
 				<pointLight position={[10, 10, 10]} />
-				<Box position={[-1.2, 0, 2]} castShadow />
+				<Box position={[-1.2, 0, 0]} castShadow />
 			</Canvas>
-		</div>
+		</SceneWrap>
 	);
 };
 

@@ -29,7 +29,7 @@ const Box: FC<BoxProps> = (props) => {
 			onPointerOver={() => setHover(true)}
 			onPointerOut={() => setHover(false)}
 		>
-			<boxGeometry args={[1.5, 1.5, 1.5]} />
+			<boxGeometry args={[1, 1, 1]} />
 			<meshStandardMaterial color={hover ? "orange" : "#939393"} />
 			<Annotation />
 		</animated.mesh>
