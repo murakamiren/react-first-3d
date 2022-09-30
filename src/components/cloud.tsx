@@ -18,7 +18,7 @@ const wordsContent: string[] = [
 	"php",
 	"pug",
 	"svelte",
-	"Node.js",
+	"node.js",
 	"rest",
 	"gulp",
 	"express.js",
@@ -59,8 +59,6 @@ const Cloud: FC<CloudProps> = ({ count = 4, radius = 20 }) => {
 		}
 		return temp;
 	}, [wordsContent, radius]);
-
-	// useFrame(() => (groupRef.current.rotation.x = groupRef.current.rotation.y += 0.01));
 
 	return (
 		<group ref={groupRef}>
