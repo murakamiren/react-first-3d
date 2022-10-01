@@ -18,7 +18,7 @@ const Box: FC<BoxProps> = (props) => {
 	useFrame(() => (meshRef.current.rotation.x = meshRef.current.rotation.y += 0.01));
 
 	// react-springを使ったアニメーション
-	const { scale } = useSpring({ scale: active ? 1.5 : 1 });
+	const { scale } = useSpring({ scale: active ? 1.6 : 1 });
 
 	return (
 		<animated.mesh
