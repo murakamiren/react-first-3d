@@ -9,7 +9,7 @@ const ShoeScene: FC = () => {
 		<SceneWrap>
 			<Canvas>
 				<Stage>
-					<Shoe shoeColors={{ laces: "red", mess: "blue", caps: "#333" }} />
+					<Shoe shoeColors={{ laces: "red", mess: "skyblue", caps: "#333" }} />
 				</Stage>
 				<OrbitControls />
 			</Canvas>
