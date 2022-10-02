@@ -1,6 +1,6 @@
 import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { FC, useId, useState } from "react";
+import { FC, Suspense, useId, useState } from "react";
 import SceneWrap from "../components/sceneWrap";
 import { Shoe } from "../components/Shoe";
 
@@ -11,13 +11,15 @@ const ShoeScene: FC = () => {
 	return (
 		<SceneWrap height="85vh">
 			<Canvas>
-				<Stage>
-					<Shoe shoeColors={{ laces: "#333", mess: color, caps: "#333" }} />
-				</Stage>
-				<OrbitControls />
+				<Suspense>
+					<Stage>
+						<Shoe shoeColors={{ laces: "#333", mess: color, caps: "#333" }} />
+					</Stage>
+					<OrbitControls />
+				</Suspense>
 			</Canvas>
 			<div>
-				<label htmlFor={id + "color-input"}>color change test</label>
+				<label htmlFor={id + "color-input"}>color change (mess)</label>
 				<input type="color" name="color" id={id + "color-input"} onChange={(e) => setColor(e.currentTarget.value)} />
 			</div>
 		</SceneWrap>

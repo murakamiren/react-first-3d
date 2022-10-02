@@ -10,11 +10,13 @@ const BoxScene = () => {
 	return (
 		<SceneWrap>
 			<Canvas shadows>
-				<PerspectiveCamera makeDefault />
-				<ambientLight intensity={0.2} />
-				<Rig />
-				<pointLight position={[10, 10, 10]} />
-				<Box position={[-1.2, 0, 0]} castShadow />
+				<Suspense>
+					<PerspectiveCamera makeDefault />
+					<ambientLight intensity={0.2} />
+					<Rig />
+					<pointLight position={[10, 10, 10]} />
+					<Box position={[-1.2, 0, 0]} castShadow />
+				</Suspense>
 			</Canvas>
 		</SceneWrap>
 	);

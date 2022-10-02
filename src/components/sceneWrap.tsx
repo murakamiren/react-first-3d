@@ -1,3 +1,4 @@
+import { Canvas, RenderProps, ThreeElements } from "@react-three/fiber";
 import { FC, ReactNode, Suspense } from "react";
 
 type SceneWrapProps = {
@@ -6,11 +7,7 @@ type SceneWrapProps = {
 };
 
 const SceneWrap: FC<SceneWrapProps> = ({ children, height }) => {
-	return (
-		<div style={{ width: "100vw", height: height ? height : "100vh" }}>
-			<Suspense fallback={<h1>loading...</h1>}>{children}</Suspense>
-		</div>
-	);
+	return <div style={{ width: "100vw", height: height ? height : "100vh" }}></div>;
 };
 
 export default SceneWrap;
