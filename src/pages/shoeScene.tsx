@@ -7,16 +7,22 @@ import { Shoe } from "../components/Shoe";
 const ShoeScene: FC = () => {
 	const id = useId();
 	const [color, setColor] = useState("#e6bf00");
+	const [isAutoRotate, setIsAutoRotate] = useState(false);
+
+	const autoRotateText = () => {
+		if (!isAutoRotate) return "enable";
+		return "disable";
+	};
 
 	return (
 		<>
 			<SceneWrap height="85vh">
-				<Canvas>
+				<Canvas camera={{ fov: 50 }}>
 					<Suspense fallback={null}>
 						<Stage>
 							<Shoe shoeColors={{ laces: "#333", mess: color, caps: "#333" }} />
 						</Stage>
-						<OrbitControls />
+						<OrbitControls autoRotate={isAutoRotate} />
 					</Suspense>
 				</Canvas>
 			</SceneWrap>
@@ -29,6 +35,9 @@ const ShoeScene: FC = () => {
 					onChange={(e) => setColor(e.currentTarget.value)}
 					value={color}
 				/>
+				<div>
+					<button onClick={() => setIsAutoRotate((pre) => !pre)}>auto rotate: {autoRotateText()}</button>
+				</div>
 			</div>
 		</>
 	);

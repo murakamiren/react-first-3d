@@ -42,11 +42,12 @@ type ShoeProps = {
 	shoeColors: ShoeColor;
 };
 
-export const Shoe: FC<ShoeProps> = ({ shoeColors, ...props }) => {
+export const Shoe: FC<ShoeProps> = ({ shoeColors, groupProps }) => {
 	const groupRef = useRef<Group>(null!);
 	const { nodes, materials } = useGLTF("/model/shoe/shoe.gltf") as any as GLTFResult;
+
 	return (
-		<group {...props} ref={groupRef} dispose={null}>
+		<group {...groupProps} ref={groupRef} dispose={null}>
 			<mesh geometry={nodes.shoe.geometry} material={materials.laces} material-color={shoeColors.laces} />
 			<mesh geometry={nodes.shoe_1.geometry} material={materials.mesh} material-color={shoeColors.mess} />
 			<mesh geometry={nodes.shoe_2.geometry} material={materials.caps} material-color={shoeColors.caps} />
