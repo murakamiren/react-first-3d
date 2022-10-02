@@ -30,13 +30,24 @@ type GLTFResult = GLTF & {
 	};
 };
 
-export const Shoe: FC = (props: JSX.IntrinsicElements["group"]) => {
+type ShoeColor = {
+	laces: string;
+	mess: string;
+	caps: string;
+};
+
+type ShoeProps = {
+	groupProps?: JSX.IntrinsicElements["group"];
+	shoeColors: ShoeColor;
+};
+
+export const Shoe: FC<ShoeProps> = ({ shoeColors, ...props }) => {
 	const { nodes, materials } = useGLTF("/model/shoe/shoe.gltf") as any as GLTFResult;
 	return (
 		<group {...props} dispose={null}>
-			<mesh geometry={nodes.shoe.geometry} material={materials.laces} />
-			<mesh geometry={nodes.shoe_1.geometry} material={materials.mesh} />
-			<mesh geometry={nodes.shoe_2.geometry} material={materials.caps} />
+			<mesh geometry={nodes.shoe.geometry} material={materials.laces} material-color={shoeColors.laces} />
+			<mesh geometry={nodes.shoe_1.geometry} material={materials.mesh} material-color={shoeColors.mess} />
+			<mesh geometry={nodes.shoe_2.geometry} material={materials.caps} material-color={shoeColors.caps} />
 			<mesh geometry={nodes.shoe_3.geometry} material={materials.inner} />
 			<mesh geometry={nodes.shoe_4.geometry} material={materials.sole} />
 			<mesh geometry={nodes.shoe_5.geometry} material={materials.stripes} />

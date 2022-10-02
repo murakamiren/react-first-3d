@@ -1,4 +1,4 @@
-import { Stage } from "@react-three/drei";
+import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { FC } from "react";
 import SceneWrap from "../components/sceneWrap";
@@ -9,8 +9,9 @@ const ShoeScene: FC = () => {
 		<SceneWrap>
 			<Canvas>
 				<Stage>
-					<Shoe />
+					<Shoe shoeColors={{ laces: "red", mess: "blue", caps: "#333" }} />
 				</Stage>
+				<OrbitControls />
 			</Canvas>
 		</SceneWrap>
 	);
