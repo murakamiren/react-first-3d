@@ -19,6 +19,9 @@ const Index: FC = () => {
 					<li>
 						<a href="wordcloudscene">word-cloud scene</a>
 					</li>
+					<li>
+						<a href="shoescene">shoe scene</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
