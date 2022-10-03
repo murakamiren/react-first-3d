@@ -7,6 +7,7 @@ import { FC, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import { Group } from "three";
+import { ShoeColor } from "../types/shoe";
 
 type GLTFResult = GLTF & {
 	nodes: {
@@ -31,12 +32,6 @@ type GLTFResult = GLTF & {
 	};
 };
 
-type ShoeColor = {
-	laces: string;
-	mess: string;
-	caps: string;
-};
-
 type ShoeProps = {
 	groupProps?: JSX.IntrinsicElements["group"];
 	shoeColors: ShoeColor;
@@ -51,11 +46,11 @@ export const Shoe: FC<ShoeProps> = ({ shoeColors, groupProps }) => {
 			<mesh geometry={nodes.shoe.geometry} material={materials.laces} material-color={shoeColors.laces} />
 			<mesh geometry={nodes.shoe_1.geometry} material={materials.mesh} material-color={shoeColors.mess} />
 			<mesh geometry={nodes.shoe_2.geometry} material={materials.caps} material-color={shoeColors.caps} />
-			<mesh geometry={nodes.shoe_3.geometry} material={materials.inner} />
-			<mesh geometry={nodes.shoe_4.geometry} material={materials.sole} />
-			<mesh geometry={nodes.shoe_5.geometry} material={materials.stripes} />
-			<mesh geometry={nodes.shoe_6.geometry} material={materials.band} />
-			<mesh geometry={nodes.shoe_7.geometry} material={materials.patch} />
+			<mesh geometry={nodes.shoe_3.geometry} material={materials.inner} material-color={shoeColors.inner} />
+			<mesh geometry={nodes.shoe_4.geometry} material={materials.sole} material-color={shoeColors.sole} />
+			<mesh geometry={nodes.shoe_5.geometry} material={materials.stripes} material-color={shoeColors.stripes} />
+			<mesh geometry={nodes.shoe_6.geometry} material={materials.band} material-color={shoeColors.band} />
+			<mesh geometry={nodes.shoe_7.geometry} material={materials.patch} material-color={shoeColors.patch} />
 		</group>
 	);
 };
