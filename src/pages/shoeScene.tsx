@@ -79,7 +79,7 @@ const ShoeScene: FC = () => {
 					</select>
 				</div>
 				<div>
-					<button onClick={() => setIsAutoRotate((pre) => !pre)}>auto rotate: {autoRotateText()}</button>
+					auto rotate: <button onClick={() => setIsAutoRotate((pre) => !pre)}>{autoRotateText()}</button>
 				</div>
 			</div>
 		</>
