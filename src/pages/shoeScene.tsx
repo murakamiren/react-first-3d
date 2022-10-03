@@ -55,7 +55,7 @@ const ShoeScene: FC = () => {
 				</Canvas>
 			</SceneWrap>
 			<div>
-				<label htmlFor={id + "-color-input"}>color change ({currentSelectedPart})</label>
+				<label htmlFor={id + "-color-input"}>color change (current: {currentSelectedPart})</label>
 				<input
 					type="color"
 					name="color"
