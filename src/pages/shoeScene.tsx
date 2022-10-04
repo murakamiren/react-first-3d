@@ -64,7 +64,7 @@ const ShoeScene: FC = () => {
 					value={color[currentSelectedPart]}
 				/>
 				<div>
-					<label htmlFor={id + "-color-select"}>shoe part</label>
+					<label htmlFor={id + "-color-select"}>part</label>
 					<select
 						name="color-select"
 						id={id + "-color-select"}
