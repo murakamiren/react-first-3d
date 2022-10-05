@@ -6,6 +6,7 @@ import ModelScene from "./pages/modelScene";
 import ShoeScene from "./pages/shoeScene";
 import TextScene from "./pages/textScene";
 import WordCloudScene from "./pages/wordCloudScene";
+import Z_s30Scene from "./pages/z_s30Scene";
 
 const route = createBrowserRouter([
 	{
@@ -35,6 +36,10 @@ const route = createBrowserRouter([
 	{
 		path: "/jordanscene",
 		element: <JordanScene />,
+	},
+	{
+		path: "/z_s30scene",
+		element: <Z_s30Scene />,
 	},
 ]);
 
