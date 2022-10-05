@@ -22,6 +22,9 @@ const Index: FC = () => {
 					<li>
 						<a href="shoescene">shoe scene</a>
 					</li>
+					<li>
+						<a href="jordanscene">nike air jordan</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
