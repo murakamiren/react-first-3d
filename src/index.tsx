@@ -28,6 +28,9 @@ const Index: FC = () => {
 					<li>
 						<a href="z_s30scene">z s30</a>
 					</li>
+					<li>
+						<a href="keyboard">keyboard</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

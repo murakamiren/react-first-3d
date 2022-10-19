@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from ".";
 import BoxScene from "./pages/boxScene";
 import JordanScene from "./pages/jordanScene";
+import KeyboardScene from "./pages/keyboardScene";
 import ModelScene from "./pages/modelScene";
 import ShoeScene from "./pages/shoeScene";
 import TextScene from "./pages/textScene";
@@ -40,6 +41,10 @@ const route = createBrowserRouter([
 	{
 		path: "/z_s30scene",
 		element: <Z_s30Scene />,
+	},
+	{
+		path: "/keyboard",
+		element: <KeyboardScene />,
 	},
 ]);
 
