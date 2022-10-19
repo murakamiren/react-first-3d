@@ -72,9 +72,10 @@ interface GLTFAction extends THREE.AnimationClip {
 type Props = {
 	groupProps?: JSX.IntrinsicElements["group"];
 	toggle: boolean;
+	isPause: boolean;
 };
 
-export function Keyboard({ groupProps, toggle }: Props) {
+export function Keyboard({ groupProps, toggle, isPause }: Props) {
 	const group = useRef<THREE.Group>(null);
 	const { nodes, materials, animations } = useGLTF("model/keyboard/keyboard.glb") as any as GLTFResult;
 	const { actions } = useAnimations(animations, group);
@@ -87,8 +88,9 @@ export function Keyboard({ groupProps, toggle }: Props) {
 			} else {
 				actions.Open.stop();
 			}
+			actions.Open.paused = isPause;
 		}
-	}, [toggle]);
+	}, [toggle, isPause]);
 
 	return (
 		<group ref={group} {...groupProps} dispose={null}>
