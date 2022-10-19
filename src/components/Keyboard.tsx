@@ -7,7 +7,7 @@ title: NZXT miniTKL - mechanical Keyboard
 */
 
 import * as THREE from "three";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
@@ -69,13 +69,29 @@ interface GLTFAction extends THREE.AnimationClip {
 	name: ActionName;
 }
 
-export function Keyboard(props: JSX.IntrinsicElements["group"]) {
+type Props = {
+	groupProps?: JSX.IntrinsicElements["group"];
+	toggle: boolean;
+};
+
+export function Keyboard({ groupProps, toggle }: Props) {
 	const group = useRef<THREE.Group>(null);
 	const { nodes, materials, animations } = useGLTF("model/keyboard/keyboard.glb") as any as GLTFResult;
 	const { actions } = useAnimations(animations, group);
 
+	useEffect(() => {
+		if (actions.Open) {
+			console.log(toggle);
+			if (toggle) {
+				actions.Open.play();
+			} else {
+				actions.Open.stop();
+			}
+		}
+	}, [toggle]);
+
 	return (
-		<group ref={group} {...props} dispose={null}>
+		<group ref={group} {...groupProps} dispose={null}>
 			<group name="Sketchfab_Scene">
 				<group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={4.34}>
 					<group name="NZXT_18_-_animation_with_bonesfbx" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
