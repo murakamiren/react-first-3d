@@ -7,11 +7,11 @@ title: iPhone 14 Pro Max
 */
 
 import * as THREE from "three";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
-import { useFrame } from "@react-three/fiber";
 import { Group } from "three";
+import { useFrame } from "@react-three/fiber";
 
 type GLTFResult = GLTF & {
 	nodes: {
@@ -112,13 +112,14 @@ type GLTFResult = GLTF & {
 };
 
 export const Iphone = (props: JSX.IntrinsicElements["group"]) => {
+	const [rotateY, setRotateY] = useState(0);
 	const ref = useRef<Group>(null!);
 	const { nodes, materials } = useGLTF("/model/iphone/iphone.glb") as any as GLTFResult;
 
-	useFrame(() => (ref.current.rotation.x += 0.01));
+	useFrame(() => setRotateY((pre) => (pre += 0.01)));
 
 	return (
-		<group {...props} ref={ref} dispose={null}>
+		<group {...props} ref={ref} dispose={null} rotation={[0, rotateY, 0]} position={[0, -2, -5]}>
 			<group rotation={[-Math.PI / 2, 0, 0]}>
 				<group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
 					<mesh
