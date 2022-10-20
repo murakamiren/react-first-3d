@@ -31,6 +31,9 @@ const Index: FC = () => {
 					<li>
 						<a href="keyboard">keyboard</a>
 					</li>
+					<li>
+						<a href="lp">lp</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

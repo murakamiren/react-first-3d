@@ -3,6 +3,7 @@ import Index from ".";
 import BoxScene from "./pages/boxScene";
 import JordanScene from "./pages/jordanScene";
 import KeyboardScene from "./pages/keyboardScene";
+import LpScene from "./pages/lpScene";
 import ModelScene from "./pages/modelScene";
 import ShoeScene from "./pages/shoeScene";
 import TextScene from "./pages/textScene";
@@ -45,6 +46,10 @@ const route = createBrowserRouter([
 	{
 		path: "/keyboard",
 		element: <KeyboardScene />,
+	},
+	{
+		path: "/lp",
+		element: <LpScene />,
 	},
 ]);
 
